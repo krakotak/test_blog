@@ -1,0 +1,29 @@
+ {% load staticfiles %}
+    <html>
+        <head>
+            <title >Тест</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<script language = "JavaScript">
+var bigsize = "500"; //Размер большой картинки
+var smallsize = "100"; //Размер маленькой картинки
+function changeSizeImage(im) {
+  if(im.height == bigsize) im.height = smallsize;
+  else im.height = bigsize;
+}
+</script>
+        </head>
+        <body>
+            <div class="page-header">
+            <h1><a href="/" >Тестовое задание</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+        </body>
+    </html>

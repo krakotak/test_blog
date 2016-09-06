@@ -1,0 +1,12 @@
+
+   {% extends 'blog/base.html' %}
+{% block content %}
+   {% for post in posts %}
+        <div class="post">
+          <p><img height="100" onclick="changeSizeImage(this)" src={{post.file.url}}>
+            {{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+      <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+   {% endblock content %}
